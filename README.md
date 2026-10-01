@@ -60,4 +60,4 @@ RGB values must be integers from 0 to 255. Add your own entries to expand the pa
 
 ## Current limitations
 
-The display annotation is drawn onto the source image. Sampling the annotation area therefore reads the overlay, not the original pixel. Fixed annotation dimensions may also clip on small images. Image-load validation and rendering overlays on a separate copy are useful future improvements.
+Annotations are drawn on a separate display copy, so sampling continues to use the original image pixels. Fixed annotation dimensions may clip on small images. The script still needs image-load validation.
