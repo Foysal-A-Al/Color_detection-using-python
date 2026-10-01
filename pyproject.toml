@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "foysal-color-detector"
+version = "0.1.0"
+description = "Interactive and headless image-pixel sampling with named palette colors"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Abdullah Al Foysal"}]
+dependencies = ["opencv-python>=4.8,<5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "build>=1"]
+
+[project.scripts]
+color-detect = "color_detector:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["color_detector*"]
+
+[tool.setuptools.package-data]
+color_detector = ["colors.csv"]
